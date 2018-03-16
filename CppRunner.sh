@@ -1,9 +1,13 @@
 #!/bin/bash
+# Author : AMIR MOHAMMADI
 # Simple shell script for personal usage :)))
 # Under GPL v.3 License
 
 # Eg1: CppRunner source.cpp
 # Eg2: CppRunner /the/place/of/source.cpp
+# Eg3: CppRunner -m file1.cpp -m file2.cpp -m file3.cpp
+
+FILES=()
 
 function ifExist {
     if [[ ! -f "$1" ]]; then
@@ -47,9 +51,23 @@ function run {
 }
 
 # main -------------------------------
-outPut=$(echo $1 | cut -d "." -f1)
+while test $# -gt 0; do
+    case $1 in
+    -m|--multiple)
+        shift
+        FILES+=("$1")
+        shift
+        ;;
+    *)
+        FILES=$1
+        break
+        ;;
+    esac
+done
+
+outPut=$(echo ${FILES[0]} | cut -d "." -f1)  
 # First check if there's an old compiled file remove that and then continue
 remove $outPut
-compile $1 $outPut
+compile ${FILES[@]} $outPut
 run
 exit
