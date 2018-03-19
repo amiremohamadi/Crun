@@ -3,7 +3,7 @@
 > A simple script to run cpp files easier and faster (using g++)
 
 I realy had a fool problem with my favorite IDE to comile and run cpp files 
-so i write this script for my own! It may help others who have same problem :)
+so i wrote this script for my own! It may help others who have same problem :)
 
 ## How to use
 
