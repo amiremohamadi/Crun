@@ -3,9 +3,9 @@
 # Simple shell script for personal usage :)))
 # Under GPL v.3 License
 
-# Eg1: CppRunner source.cpp
-# Eg2: CppRunner /the/place/of/source.cpp
-# Eg3: CppRunner -m file1.cpp -m file2.cpp -m file3.cpp
+# Eg1: crun source.cpp
+# Eg2: crun /the/place/of/source.cpp
+# Eg3: crun -m file1.cpp -m file2.cpp -m file3.cpp
 
 FILES=()
 
