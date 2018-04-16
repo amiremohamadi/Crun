@@ -1,6 +1,6 @@
 #!/bin/bash
 # Author : AMIR MOHAMMADI
-# Simple shell script for personal usage :)))
+# A simple shell script for personal usage :)))
 # Under GPL v.3 License
 
 # Eg1: crun source.cpp
